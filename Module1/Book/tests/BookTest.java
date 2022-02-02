@@ -20,12 +20,12 @@ public class BookTest {
 
   @Test
   public void testTitle(){
-    assertEquals("J.K.", this.harryPotter.getTitle());
+    assertEquals("Harry Potter", this.harryPotter.getTitle());
   }
 
   @Test
   public void testAuthor(){
-    assertEquals(this.author,this.harryPotter.getAuthor());
+    assertEquals("J.K.",this.harryPotter.getAuthor());
   }
 
   @Test

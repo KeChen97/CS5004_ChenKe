@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a11a50d-79ed-42ca-ba88-93dbe29b27bd" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module1/Book/Book.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/Book.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module1/Person/Person.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/Person.iml" afterDir="false" />
+    <list default="true" id="5a11a50d-79ed-42ca-ba88-93dbe29b27bd" name="Changes" comment="Lab01">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/src/HelloWorld" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld/src/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +66,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643260582924</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lab01">
+      <created>1643619887742</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643619887742</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Lab01">
+      <created>1643619898655</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643619898655</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Lab01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab01" />
   </component>
 </project>

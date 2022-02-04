@@ -8,7 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Person" />
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
@@ -19,5 +18,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="Person" scope="TEST" />
+    <orderEntry type="module" module-name="Person" />
   </component>
 </module>

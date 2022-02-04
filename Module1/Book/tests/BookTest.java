@@ -25,7 +25,7 @@ public class BookTest {
 
   @Test
   public void testAuthor(){
-    assertEquals("J.K.",this.harryPotter.getAuthor());
+    assertEquals(this.author,this.harryPotter.getAuthor());
   }
 
   @Test

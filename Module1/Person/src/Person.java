@@ -16,6 +16,12 @@ public class Person {
    * @param yearOfBirth the year of birth of this person
    */
   public Person(String firstName, String lastName, int yearOfBirth) {
+    if(firstName == ""){
+      throw new IllegalArgumentException("Author name can't be empty");
+    }
+    if(yearOfBirth <1){
+      throw new IllegalArgumentException("Year of birth must be positive integer");
+    }
     this.firstName = firstName;
     this.lastName = lastName;
     this.yearOfBirth = yearOfBirth;
@@ -64,5 +70,18 @@ public class Person {
    */
   public String getFullName() {
     return this.firstName + " " + this.lastName;
+  }
+
+  /**
+   *
+   * @return boolean
+   */
+  public boolean samePerson( Person other){
+    return this.firstName.equals(other.firstName) && this.lastName.equals(other.lastName) && this.yearOfBirth == other.yearOfBirth ;
+  }
+
+  @Override
+  public String toString() {
+    return firstName + " " +lastName + ", " + yearOfBirth  + ", " + this.getAge() ;
   }
 }

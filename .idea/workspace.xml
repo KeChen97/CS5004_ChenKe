@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2d75821-81bd-4d33-8dce-3f9f445e4a71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Person/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/Person/PersonTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8244e963-b106-4b75-9678-ba288a6753d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PetRock/PetRock.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetRock/src/PetRock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetRock/test/PetRockTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/out.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PetRock/PetRock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PetRock/PetRockTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld/src/HelloWorld.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Module1/Book/Book.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/Book.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module1/Person/Person.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/Person.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/Book/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/Person/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/Person/tests/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/tests/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Book/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Person/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Person/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Book/BookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Book/BookTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/CS5004_ChenKe/PersonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Person/PersonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Person/PersonTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,7 +40,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="24aOmB9z8C7Dc5ZS6WYU7QYMzFM" />
+  <component name="ProjectId" id="24lek0Qp2RTX28OxhzdnxBQmcHD" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -38,14 +56,33 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
   </component>
-  <component name="RunManager" selected="JUnit.BookTest.testAuthor">
-    <configuration name="BookTest.testAuthor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PetRockTest">
+    <configuration name="PetRock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PetRock" />
+      <module name="PetRock" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PetRock" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Book" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="testAuthor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -54,26 +91,56 @@
       <module name="Person" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PersonTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PersonTest.testReasonableBirth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Person" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonTest" />
+      <option name="METHOD_NAME" value="testReasonableBirth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetRockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PetRock" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PetRockTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PetRock" />
+      <item itemvalue="JUnit.BookTest" />
+      <item itemvalue="JUnit.PersonTest.testReasonableBirth" />
+      <item itemvalue="JUnit.PersonTest" />
+      <item itemvalue="JUnit.PetRockTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BookTest.testAuthor" />
+        <item itemvalue="JUnit.PetRockTest" />
+        <item itemvalue="Application.PetRock" />
         <item itemvalue="JUnit.PersonTest" />
+        <item itemvalue="JUnit.PersonTest.testReasonableBirth" />
+        <item itemvalue="JUnit.BookTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a2d75821-81bd-4d33-8dce-3f9f445e4a71" name="Changes" comment="" />
-      <created>1643865388057</created>
+      <changelist id="8244e963-b106-4b75-9678-ba288a6753d6" name="Changes" comment="" />
+      <created>1644209739709</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1643865388057</updated>
+      <updated>1644209739709</updated>
     </task>
     <servers />
   </component>

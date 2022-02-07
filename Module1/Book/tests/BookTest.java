@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,23 +14,41 @@ public class BookTest {
 
 
   @Before
-  public void setUp(){
-    this.author  = new Person("J.K.","Rowling",1965);
-    this.harryPotter = new Book ("Harry Potter", this.author, 24.99f);
+  public void setUp() {
+    this.author = new Person("J.K.", "Rowling", 1965);
+    this.harryPotter = new Book("Harry Potter", this.author, 20);
   }
 
   @Test
-  public void testTitle(){
+  public void testTitle() {
     assertEquals("Harry Potter", this.harryPotter.getTitle());
   }
 
   @Test
-  public void testAuthor(){
-    assertEquals(this.author,this.harryPotter.getAuthor());
+  public void testAuthor() {
+    assertEquals(this.author, this.harryPotter.getAuthor());
   }
 
   @Test
-  public void testPrice(){
-    assertEquals(24.99f,this.harryPotter.getPrice());
+  public void testPrice() {
+    assertEquals(20.0f, this.harryPotter.getPrice(), 0.01);
   }
+
+  @Test
+  public void testIllegalDicsount() {
+    float discountedPrice;
+    try {
+      discountedPrice = harryPotter.salePrice(20);
+      assertEquals(16.0f, discountedPrice, 0.01);
+    } catch (IllegalArgumentException e) {
+      fail("An exception should not be thrown.");
+    }
+    try {
+      discountedPrice = harryPotter.salePrice(-10);
+      fail("An exception should be thrown.");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+
 }

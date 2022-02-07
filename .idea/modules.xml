@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Module1/Book/Book.iml" filepath="$PROJECT_DIR$/Module1/Book/Book.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module1/Person/Person.iml" filepath="$PROJECT_DIR$/Module1/Person/Person.iml" />
-      <module fileurl="file://$PROJECT_DIR$/out/production/production.iml" filepath="$PROJECT_DIR$/out/production/production.iml" />
-      <module fileurl="file://$PROJECT_DIR$/out/test/test.iml" filepath="$PROJECT_DIR$/out/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PetRock/PetRock.iml" filepath="$PROJECT_DIR$/PetRock/PetRock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/out.iml" filepath="$PROJECT_DIR$/out/out.iml" />
     </modules>
   </component>
 </project>

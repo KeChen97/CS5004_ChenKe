@@ -45,4 +45,35 @@ public class Book {
   public Person getAuthor() {
     return this.author;
   }
+
+  /**
+   * Return the discounted price.
+   * @param discount
+   * @return
+   * @throws IllegalArgumentException
+   */
+  public float salePrice (float discount) throws IllegalArgumentException {
+    if (discount<0){
+      throw new IllegalArgumentException("Discount cannot be negative");
+    }
+    float salePrice = this.price - ((this.price* discount)/100);
+    return salePrice;
+  }
+
+  /**
+   * Return discount book.
+   * @param discount
+   * @return
+   */
+  public Book discountBook (float discount){
+    float discountedPrice = this.salePrice(discount);
+    try{
+      discountedPrice = this.salePrice(discount);
+    }
+    catch(IllegalArgumentException e){
+      // this will be executed only if an IllegalArgumentException is thrown
+
+    }
+    return new Book(this.title,this.author,discountedPrice);
+  }
 }

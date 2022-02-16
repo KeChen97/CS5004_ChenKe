@@ -73,7 +73,6 @@ public class FractionTest {
   @Test
   public void testEquals() {
     assertFalse(this.a.equals(this.b));
-   // assertTrue(this.a.equals(this.d));
   }
 
   @Test
@@ -82,6 +81,12 @@ public class FractionTest {
     assertEquals(this.e,this.a.reciprocal());
     this.e = new Fraction(-2,1);
     assertEquals(this.e,this.b.reciprocal());
+  }
+
+  @Test (expected = IllegalArgumentException.class)
+  public void testZeroReciprocal(){
+    this.e = new Fraction(0,2);
+    this.e.reciprocal();
   }
 
   @Test

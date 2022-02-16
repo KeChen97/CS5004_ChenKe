@@ -57,15 +57,14 @@ public class Fraction {
   }
 
   /**
-   *
    * @return new fraction with simplified value
    */
-  public Fraction simplify(){
+  public Fraction simplify() {
     int commonDivisor = 1;
-    commonDivisor = gcd(this.numerator,this.denominator);
-    int newNumerator = this.numerator/commonDivisor;
-    int newDenominator = this.denominator/commonDivisor;
-    Fraction simplified = new Fraction(newNumerator,newDenominator);
+    commonDivisor = gcd(this.numerator, this.denominator);
+    int newNumerator = this.numerator / commonDivisor;
+    int newDenominator = this.denominator / commonDivisor;
+    Fraction simplified = new Fraction(newNumerator, newDenominator);
     return simplified;
   }
 
@@ -75,7 +74,7 @@ public class Fraction {
    * @return numerator
    */
   public int getNumerator() {
-    return numerator;
+    return this.numerator;
   }
 
   /**
@@ -84,7 +83,7 @@ public class Fraction {
    * @return denominator
    */
   public int getDenominator() {
-    return denominator;
+    return this.denominator;
   }
 
   /**
@@ -100,7 +99,7 @@ public class Fraction {
    * @return if the other fraction is same with this fraction
    */
   public boolean equals(Object other) {
-    Fraction otherFraction = (Fraction) other;
+//    Fraction otherFraction = (Fraction) other;
     if (this.numerator == ((Fraction) other).getNumerator() &&
         this.denominator == ((Fraction) other).getDenominator()) {
       return true;
@@ -112,11 +111,16 @@ public class Fraction {
    * @return the reciprocal of this fraction
    */
   public Fraction reciprocal() {
+    Fraction reciprocal = new Fraction(this.numerator, this.denominator);
     if (this.numerator == 0) {
-      Fraction sameFraction = new Fraction(this.numerator, this.denominator);
-      return sameFraction;
+      throw new IllegalArgumentException("Zero doesn't have a reciprocal.");
     }
-    Fraction reciprocal = new Fraction(this.denominator, this.numerator);
+    if(this.numerator < 0) {
+      reciprocal = new Fraction(-this.denominator, -this.numerator);
+    }
+    else{
+      reciprocal = new Fraction(this.denominator, this.numerator);
+    }
     return reciprocal;
   }
 

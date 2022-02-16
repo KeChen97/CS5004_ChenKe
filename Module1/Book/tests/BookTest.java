@@ -16,7 +16,7 @@ public class BookTest {
   @Before
   public void setUp() {
     this.author = new Person("J.K.", "Rowling", 1965);
-    this.harryPotter = new Book("Harry Potter", this.author, 20);
+    this.harryPotter = new Book("Harry Potter", this.author, 20, TypeOfBook.HARDCOVER, GenreOfBook.ADVENTURE);
   }
 
   @Test
@@ -51,4 +51,14 @@ public class BookTest {
   }
 
 
+  @Test
+  public void testToString() {
+    String name =  "Title: Harry Potter\n" +
+                   "Author: J.K. Rowling\n" +
+                  "Type: Hard Cover\n" +
+                  "Genre: Adventure\n" +
+                  "Price: 20.00";
+    assertEquals(name, this.harryPotter.toString());
+
+  }
 }

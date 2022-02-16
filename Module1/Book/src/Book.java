@@ -5,6 +5,9 @@ public class Book {
   private String title;
   private Person author;
   private float price;
+  private TypeOfBook typeOfBook;
+  private GenreOfBook genre;
+
 
   /**
    * Construct a Book object that has the provided title, author and price
@@ -12,11 +15,14 @@ public class Book {
    * @param title  the title to be given to this book
    * @param author the author to be given to this book
    * @param price  the price to be assigned to this book
+   *
    */
-  public Book(String title, Person author, float price) {
+  public Book(String title, Person author, float price, TypeOfBook typeOfBook, GenreOfBook genre) {
     this.title = title;
     this.author = author;
     this.price = price;
+    this.typeOfBook = typeOfBook;
+    this.genre = genre;
   }
 
   /**
@@ -72,8 +78,52 @@ public class Book {
     }
     catch(IllegalArgumentException e){
       // this will be executed only if an IllegalArgumentException is thrown
-
     }
-    return new Book(this.title,this.author,discountedPrice);
+    return new Book(this.title,this.author,discountedPrice, this.typeOfBook, this.genre);
+  }
+
+
+  public String toString() {
+    String str;
+
+    str = "Title: " + this.title + "\n" +
+        "Author: " + this.author.getFullName() + "\n" +
+        "Type: ";
+
+    switch (typeOfBook) {
+      case PAPERBACK:
+        str = str + "Paperback";
+        break;
+      case HARDCOVER:
+        str = str + "Hard Cover";
+        break;
+      case KINDLE:
+        str = str + "Kindle";
+        break;
+    }
+    str = str + "\n"+"Genre: ";
+
+    switch (genre) {
+      case ROMANCE:
+        str = str + "Romance";
+        break;
+      case MURDER:
+        str = str + "Murder";
+        break;
+      case HISTORY:
+        str = str + "History";
+        break;
+      case TECHNICAL:
+        str = str + "Technical";
+        break;
+      case ADVENTURE:
+        str = str + "Adventure";
+        break;
+    }
+
+    str = str + "\n";
+    str = str + String.format("Price: %.2f", price);
+
+    return str;
   }
 }

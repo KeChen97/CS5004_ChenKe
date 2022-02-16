@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8244e963-b106-4b75-9678-ba288a6753d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PetRock/PetRock.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetRock/src/PetRock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetRock/test/PetRockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/out.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PetRock/PetRock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/PetRock/PetRockTest.class" afterDir="false" />
+    <list default="true" id="dc8e2bb1-4642-47ca-a615-fa18fb52bae4" name="Changes" comment="HW01: Fractions Class">
+      <change afterPath="$PROJECT_DIR$/Fraction/src/GreatestCommonDivisor/GreatestCommonDivisor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module1/Book/src/GenreOfBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module1/Book/src/TypeOfBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/Shape.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/AbstractShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/Point2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/test/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Book/Book$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Book/GenreOfBook.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Book/TypeOfBook.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Fraction/Fraction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Fraction/GreatestCommonDivisor/GreatestCommonDivisor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Shape/AbstractShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Shape/Circle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Shape/Point2D.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Shape/Rectangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Shape/Shape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/out/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/out/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/Fraction/FractionTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/Shape/ShapeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraction/src/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fraction/src/Fraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraction/test/FractionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fraction/test/FractionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module1/Book/Book.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/Book.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module1/Book/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/src/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Book/tests/BookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module1/Person/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/Person/Person.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/Person.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module1/Person/tests/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/Person/tests/PersonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Book/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Person/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Person/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Book/BookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Book/BookTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/CS5004_ChenKe/PersonTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Person/PersonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Person/PersonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/PetRock/PetRockTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/PetRock/PetRockTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +59,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="24lek0Qp2RTX28OxhzdnxBQmcHD" />
+  <component name="ProjectId" id="24tQRrEjMR5YU7UwjPllH1hXIzQ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -59,8 +78,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Module1/Book/src" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -68,21 +93,42 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PetRockTest">
-    <configuration name="PetRock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PetRock" />
-      <module name="PetRock" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PetRock" />
+  <component name="RunManager" selected="JUnit.FractionTest">
+    <configuration name="Fraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Fraction" />
+      <module name="Fraction" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Book" />
+    <configuration name="GreatestCommonDivisor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GreatestCommonDivisor.GreatestCommonDivisor" />
+      <module name="Fraction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GreatestCommonDivisor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FractionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fraction" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FractionTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FractionTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fraction" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FractionTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,57 +137,38 @@
       <module name="Person" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PersonTest" />
-      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.testReasonableBirth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Person" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PersonTest" />
-      <option name="METHOD_NAME" value="testReasonableBirth" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PetRockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PetRock" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PetRockTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.PetRock" />
-      <item itemvalue="JUnit.BookTest" />
-      <item itemvalue="JUnit.PersonTest.testReasonableBirth" />
-      <item itemvalue="JUnit.PersonTest" />
-      <item itemvalue="JUnit.PetRockTest" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PetRockTest" />
-        <item itemvalue="Application.PetRock" />
+        <item itemvalue="JUnit.FractionTest" />
+        <item itemvalue="Application.Fraction" />
+        <item itemvalue="Application.GreatestCommonDivisor" />
         <item itemvalue="JUnit.PersonTest" />
-        <item itemvalue="JUnit.PersonTest.testReasonableBirth" />
-        <item itemvalue="JUnit.BookTest" />
+        <item itemvalue="JUnit.FractionTest.add" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8244e963-b106-4b75-9678-ba288a6753d6" name="Changes" comment="" />
-      <created>1644209739709</created>
+      <changelist id="dc8e2bb1-4642-47ca-a615-fa18fb52bae4" name="Changes" comment="" />
+      <created>1644447397788</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1644209739709</updated>
+      <updated>1644447397788</updated>
     </task>
+    <task id="LOCAL-00001" summary="HW01: Fractions Class">
+      <created>1644810889728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644810889728</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,5 +184,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="HW01: Fractions Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW01: Fractions Class" />
   </component>
 </project>

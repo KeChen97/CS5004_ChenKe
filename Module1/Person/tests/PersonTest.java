@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
@@ -27,7 +26,13 @@ public class PersonTest {
     assertEquals("John", this.john.getFirstName());
     assertEquals("Sally", this.sally.getFirstName());
   }
- 
+
+  @Test
+  public void testGetYearOfBirth(){
+    assertEquals(1945, this.john.getYearOfBirth());
+    assertEquals(1951, this.sally.getYearOfBirth());
+  }
+
   @Test
   public void testAge() {
     assertEquals(75, this.john.getAge());

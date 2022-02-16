@@ -39,6 +39,7 @@ public class FractionTest {
     this.a.setDenominator(0);
   }
 
+
   @Test
   public void testGetNumerator() {
     assertEquals(1,this.a.getNumerator());
@@ -54,6 +55,15 @@ public class FractionTest {
     assertEquals(2,this.c.getDenominator());
     assertEquals(2,this.d.getDenominator());
   }
+
+  @Test
+  public void testSimplify(){
+    this.e = new Fraction(-4,8);
+    this.e = e.simplify();
+    assertEquals(-1,this.e.getNumerator());
+    assertEquals(2,this.e.getDenominator());
+  }
+
 
   @Test
   public void testToDouble() {
@@ -93,5 +103,7 @@ public class FractionTest {
   public void testToString() {
     String string = "Fraction: -1/2";
     assertEquals(string,this.b.toString());
+    this.e = new Fraction(-4,8);
+    assertEquals(string,this.e.toString());
   }
 }

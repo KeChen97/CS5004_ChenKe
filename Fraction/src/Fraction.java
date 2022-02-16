@@ -1,3 +1,5 @@
+import static GreatestCommonDivisor.GreatestCommonDivisor.gcd;
+
 /**
  * This class represents a fraction with a numerator, and a denomirator
  */
@@ -52,6 +54,19 @@ public class Fraction {
    */
   public void setDenominator(int denominator) {
     this.denominator = reasonableDenominator(denominator);
+  }
+
+  /**
+   *
+   * @return new fraction with simplified value
+   */
+  public Fraction simplify(){
+    int commonDivisor = 1;
+    commonDivisor = gcd(this.numerator,this.denominator);
+    int newNumerator = this.numerator/commonDivisor;
+    int newDenominator = this.denominator/commonDivisor;
+    Fraction simplified = new Fraction(newNumerator,newDenominator);
+    return simplified;
   }
 
   /**
@@ -142,15 +157,16 @@ public class Fraction {
    */
   @Override
   public String toString() {
+
     return "Fraction: " +
-        +numerator + "/" +
-        denominator;
+        +simplify().getNumerator() + "/" +
+        simplify().getDenominator();
   }
 
   public static void main(String[] args) {
     Fraction frc = new Fraction(1, -2);
     System.out.println(frc.toString());
-    Fraction frcc = new Fraction(-1, 1);
+    Fraction frcc = new Fraction(-2, 2);
     System.out.println(frcc.toString());
     System.out.println(frc.add(frcc).toString());
 

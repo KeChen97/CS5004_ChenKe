@@ -24,10 +24,9 @@ public interface Polynomial {
 
   /**
    *
-   * @param power
    * @return the leading coefficient
    */
-  public double getLeadingCoefficient(int power);
+  public double getLeadingCoefficient();
 
   /**
    *

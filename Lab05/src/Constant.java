@@ -37,20 +37,16 @@ public class Constant implements Polynomial{
    */
   @Override
   public String getString() {
-    String string= ""+this.term;
+    String s = String.format("%.1f",this.term);
+    String string= "p(x)=" + s;
     return string;
   }
 
   /**
-   * @param power 
-   * @return this constant if input power is 0
-   * @throws IllegalArgumentException
+   * @return leading coefficient, return this constant if input power is 0
    */
   @Override
-  public double getLeadingCoefficient(int power) throws IllegalArgumentException{
-    if(power!=0){
-      throw new IllegalArgumentException("Constant's coefficient is 0.");
-    }
+  public double getLeadingCoefficient() {
     return this.term;
   }
 
@@ -109,7 +105,15 @@ public class Constant implements Polynomial{
       throw new IllegalArgumentException();
     }
     double newConstant = other.getCoefficient(0) + this.term;
-    Polynomial p = this.term.plus(other);
+    Polynomial p = new Constant(newConstant);
     return p;
   }
+
+  public static void main (String[] args) {
+    Constant test = new Constant(0.234);
+    System.out.println(test.getString());
+  }
+
 }
+
+

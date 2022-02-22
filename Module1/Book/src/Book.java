@@ -71,15 +71,15 @@ public class Book {
    * @param discount
    * @return
    */
-  public Book discountBook (float discount){
-    float discountedPrice = this.salePrice(discount);
-    try{
+  public Book discountBook (float discount) throws IllegalArgumentException {
+    float discountedPrice;
+    try {
       discountedPrice = this.salePrice(discount);
-    }
-    catch(IllegalArgumentException e){
+      return new Book(this.title, this.author, discountedPrice, this.typeOfBook, this.genre);
+    } catch (IllegalArgumentException e) {
       // this will be executed only if an IllegalArgumentException is thrown
+      return null;
     }
-    return new Book(this.title,this.author,discountedPrice, this.typeOfBook, this.genre);
   }
 
 

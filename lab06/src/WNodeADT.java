@@ -1,7 +1,7 @@
 
 /**
  * This interface represents all operations for a word in a word list
- * implements as an ADT
+ * implements as an  ADT
  */
 public interface WNodeADT {
 

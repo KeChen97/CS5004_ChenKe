@@ -1,3 +1,6 @@
+/**
+ *This class implements the List of words ADT
+ */
 public class WListADTImpl implements WListADT {
   WNodeADT head;
 

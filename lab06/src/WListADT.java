@@ -1,6 +1,5 @@
 /**
  * This interface represents all operations a word list
- *
  */
 public interface WListADT {
   /**

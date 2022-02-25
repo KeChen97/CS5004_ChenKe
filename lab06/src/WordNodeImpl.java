@@ -1,3 +1,6 @@
+/**
+ * This class implements the word node ADT
+ */
 public class WordNodeImpl implements WNodeADT {
   String word;
   WNodeADT next;

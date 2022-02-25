@@ -1,6 +1,8 @@
+/**
+ * This class implements the empty word node ADT
+ */
 public class WordNodeEmptyImpl implements WNodeADT {
   String word;
-// WNodeADT next;
 
 
   public WordNodeEmptyImpl() {

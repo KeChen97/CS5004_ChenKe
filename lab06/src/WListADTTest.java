@@ -2,6 +2,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * Tests for WordList ADT
+ */
 public class WListADTTest {
   private WListADT list1;
 

@@ -1,25 +1,25 @@
 
 /**
- * This interface represents all operations for a word in a word list
- * implements as an  ADT
+ * This interface represents all operations for a word in a word list implements as an  ADT
  */
 public interface WNodeADT {
 
   /**
    * get the word at index
+   *
    * @param index
-   * @return
+   * @return a string
    * @throws IllegalArgumentException
    */
   String getWord(int index) throws IllegalArgumentException;
 
   /**
-   * @return string
+   * @return representation of this node
    */
   String toString();
 
   /**
-   * @return size
+   * @return count of string
    */
   int getSize();
 
@@ -30,6 +30,7 @@ public interface WNodeADT {
 
   /**
    * add new word at index
+   *
    * @param index
    * @param word
    * @return
@@ -39,6 +40,7 @@ public interface WNodeADT {
 
   /**
    * remove the word at index
+   *
    * @param index
    * @return
    * @throws IllegalArgumentException
@@ -54,8 +56,7 @@ public interface WNodeADT {
    * @return words at odd index
    * @throws IllegalArgumentException
    */
-  WNodeADT getOdd()throws IllegalArgumentException;
+  WNodeADT getOdd() throws IllegalArgumentException;
 
-  
 
 }

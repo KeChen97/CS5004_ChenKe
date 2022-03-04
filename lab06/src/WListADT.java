@@ -2,25 +2,27 @@
  * This interface represents all operations a word list
  */
 public interface WListADT {
+
   /**
    * This function will add a new string val at the index position
+   *
    * @param index
    * @param val
    */
-  void addIndex(int index, String val)throws IllegalArgumentException;
+  void addIndex(int index, String val) throws IllegalArgumentException;
 
   /**
    * Remove a string at index
+   *
    * @param index
    */
-  void remove(int index)throws IllegalArgumentException;
+  void remove(int index) throws IllegalArgumentException;
 
   /**
-   *
    * @param index
    * @return the string at index
    */
-  String get(int index)throws IllegalArgumentException;
+  String get(int index) throws IllegalArgumentException;
 
   /**
    * @return the count of string in this list
@@ -42,5 +44,10 @@ public interface WListADT {
    */
   WListADT evenWords();
 
+  /**
+   * Representation of this list
+   *
+   * @return
+   */
   String toString();
 }

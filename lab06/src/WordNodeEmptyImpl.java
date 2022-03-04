@@ -2,6 +2,7 @@
  * This class implements the empty word node ADT
  */
 public class WordNodeEmptyImpl implements WNodeADT {
+
   String word;
 
 
@@ -15,7 +16,7 @@ public class WordNodeEmptyImpl implements WNodeADT {
   }
 
   @Override
-  public String toString(){
+  public String toString() {
     return "";
   }
 
@@ -31,6 +32,7 @@ public class WordNodeEmptyImpl implements WNodeADT {
 
   /**
    * Add a new word node in front of this empty node
+   *
    * @param index
    * @param word
    * @return
@@ -38,32 +40,34 @@ public class WordNodeEmptyImpl implements WNodeADT {
    */
   @Override
   public WNodeADT add(int index, String word) throws IllegalArgumentException {
-    if(index == 0){
-      return new WordNodeImpl(word,this);
+    if (index == 0) {
+      return new WordNodeImpl(word, this);
     }
     throw new IllegalArgumentException("Invalid index to add an element");
   }
 
   /**
    * can't remove from nothing
+   *
    * @param index
    * @return an empty string
    * @throws IllegalArgumentException
    */
   @Override
   public WNodeADT remove(int index) throws IllegalArgumentException {
-    if(index == 0){
+    if (index == 0) {
       return this;
     }
     throw new IllegalArgumentException();
   }
 
-  public WNodeADT getEven(){
+  //zero is even
+  public WNodeADT getEven() {
     return this;
   }
 
   //can't get odd index node from nothing
-  public WNodeADT getOdd() throws IllegalArgumentException{
+  public WNodeADT getOdd() throws IllegalArgumentException {
     return this;
   }
 }

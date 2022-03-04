@@ -11,8 +11,8 @@ public interface Polynomial {
 
   /**
    *
-   * @param power
-   * @return the coefficient for the term with that power
+   * @param  power
+   * @return double: the coefficient for the term with that power
    */
   public double getCoefficient(int power);
 
@@ -24,41 +24,40 @@ public interface Polynomial {
 
   /**
    *
-   * @return the leading coefficient
+   * @return double: the leading coefficient (the coefficient for the term with biggest degree)
    */
   public double getLeadingCoefficient();
 
   /**
-   *
+   * The result where the polynomial evaluate at when input a number
    * @param number
-   * @return the polynomial at that number
+   * @return double: the polynomial at that number
    */
   public double evaluateAt(double number);
 
   /**
    * The polynomial evaluated at 0
-   * @return
+   * @return double: the value when x=0
    */
   public double getYIntercept();
 
   /**
-   * If the input
-   * @param number
+   * @param  number
    * @return true if the polynomial is 0 at that number
    */
   public boolean isRoot(double number);
 
   /**
    *
-   * @param other
-   * @return
+   * @param  other
+   * @return true if they are the same Polynomial (same degree and same coefficient for every term)
    */
   public boolean isEqualTo(Polynomial other);
 
   /**
    *
-   * @param other
-   * @return polynomial by adding two polynomials
+   * @param  other
+   * @return a new polynomial by adding two polynomials together
    */
   public Polynomial plus(Polynomial other) throws IllegalArgumentException;
 }

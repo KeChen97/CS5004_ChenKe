@@ -1,5 +1,5 @@
 /**
- *
+ * This class includes all methods for a constant
  */
 public class Constant implements Polynomial{
   private double term;
@@ -13,16 +13,16 @@ public class Constant implements Polynomial{
   }
 
   /**
-   * @return degree of this constant
+   * @return int: degree of this constant
    */
   public int getDegree() {
     return 0;
   }
 
   /**
-   * @param power 
+   * @param  power
    * @return this constant if input power is 0
-   * @throws IllegalArgumentException 
+   * @throws IllegalArgumentException if input is not zero because this is a constant
    */
   @Override
   public double getCoefficient(int power) throws IllegalArgumentException{
@@ -33,6 +33,7 @@ public class Constant implements Polynomial{
   }
 
   /**
+   * display a constant
    * @return string
    */
   @Override
@@ -69,7 +70,7 @@ public class Constant implements Polynomial{
   }
 
   /**
-   * 
+   * A constant polynomial will only have root when the constant is 0
    * @param number 
    * @return true if the constant os 0, otherwise false.
    */
@@ -96,7 +97,7 @@ public class Constant implements Polynomial{
 
   /**
    * @param other 
-   * @return 
+   * @return a new polynomial by adding two polynomials together
    * @throws IllegalArgumentException
    */
   @Override
@@ -107,11 +108,6 @@ public class Constant implements Polynomial{
     double newConstant = other.getCoefficient(0) + this.term;
     Polynomial p = new Constant(newConstant);
     return p;
-  }
-
-  public static void main (String[] args) {
-    Constant test = new Constant(0.234);
-    System.out.println(test.getString());
   }
 
 }

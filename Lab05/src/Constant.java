@@ -37,7 +37,7 @@ public class Constant implements Polynomial {
   /**
    * display a constant
    *
-   * @return string
+   * @return  a string
    */
   @Override
   public String getString() {

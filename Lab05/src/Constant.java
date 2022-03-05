@@ -47,7 +47,7 @@ public class Constant implements Polynomial {
   }
 
   /**
-   * @return leading coefficient, return this constant if input power is 0
+   * @return leading coefficient, return this constant
    */
   @Override
   public double getLeadingCoefficient() {
@@ -66,7 +66,7 @@ public class Constant implements Polynomial {
   /**
    * Result will be the constant
    *
-   * @return
+   * @return double
    */
   @Override
   public double getYIntercept() {

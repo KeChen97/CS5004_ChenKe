@@ -19,7 +19,7 @@ public class Constant extends AbstractTerm {
   }
 
   /**
-   * @return degree of this constant
+   * @return int: degree of this constant
    */
   @Override
   public int getDegree() {
@@ -29,7 +29,7 @@ public class Constant extends AbstractTerm {
   /**
    * @param power
    * @return this constant if input power is 0
-   * @throws IllegalArgumentException
+   * @throws IllegalArgumentException if input is not zero because this is a constant
    */
   @Override
   public double getCoefficient(int power) throws IllegalArgumentException {
@@ -65,7 +65,7 @@ public class Constant extends AbstractTerm {
 
   /**
    * @param number
-   * @return the polynomial at input number
+   * @return the polynomial evaluated at input number
    */
   @Override
   public double evaluateAt(double number) {
@@ -82,7 +82,7 @@ public class Constant extends AbstractTerm {
   }
 
   /**
-   *
+   * A constant polynomial will only have root when the constant is 0
    * @param number
    * @return true if the constant is 0, otherwise false.
    */
@@ -112,7 +112,7 @@ public class Constant extends AbstractTerm {
 
   /**
    * @param other
-   * @return
+   * @return a new polynomial by adding two polynomials together
    * @throws IllegalArgumentException
    */
   @Override

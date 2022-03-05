@@ -3,14 +3,18 @@ package AbstractVersion;
 public class Line extends AbstractTerm{
   private Constant constant;
 
-
+  /**
+   * Constructs a line and initializes it
+   *
+   * @param
+   */
   public Line(double coefficient, Constant constant) {
     super(coefficient, 1);
     this.constant = constant;
 
   }
 
-  // for term whose coefficient is 1 and constant is 0
+  // no parameter for term whose coefficient is 1 and constant is 0
   public Line() {
     super(1, 1);
     this.constant = new Constant();
@@ -57,7 +61,7 @@ public class Line extends AbstractTerm{
   }
 
   /**
-   * @return Display this term
+   * @return Display this line
    */
   @Override
   public String getString() {
@@ -101,7 +105,7 @@ public class Line extends AbstractTerm{
   }
 
   /**
-   * @return this.coefficient if it is not 0
+   * @return double this.coefficient if it is not 0
    */
   @Override
   public double getLeadingCoefficient() {
@@ -113,18 +117,29 @@ public class Line extends AbstractTerm{
     }
   }
 
+  /**
+   * @param number
+   * @return the double result evaluated at input number
+   */
   @Override
   public double evaluateAt(double number) {
     double result = number*this.coefficient + this.constant.evaluateAt(number);
     return result;
   }
 
+  /**
+   * @return a double result when input is 0
+   */
   @Override
   public double getYIntercept() {
     double result = 0*coefficient + this.constant.getYIntercept();
     return result;
   }
 
+  /**
+   * @param number
+   * @return true if the polynomial evaluated 0 at this number
+   */
   @Override
   public boolean isRoot(double number) {
     double result = number*coefficient + this.constant.evaluateAt(number);
@@ -185,7 +200,12 @@ public class Line extends AbstractTerm{
     return newLine;
   }
 
-
+  /**
+   * takes another polynomial of degree 0 or 1 and returns the polynomial obtained by multiplying the two
+   * @param other
+   * @return
+   * @throws IllegalArgumentException if degree >=2
+   */
   @Override
   public Polynomial multiply(Polynomial other) throws IllegalArgumentException {
     if(other.getDegree()>1){

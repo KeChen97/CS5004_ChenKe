@@ -3,19 +3,25 @@ package AbstractVersion;
 public class Quadratic extends AbstractTerm {
   private Polynomial line;
 
-
+  /**
+   * Constructs a quadratic and initializes it
+   *
+   * @param coefficient, Polynomial line
+   */
   public Quadratic(double coefficient, Polynomial line) {
     super(coefficient, 2);
     this.line = line;
   }
 
-  //x^2+x
+  //no parameter for x^2+x
   public Quadratic() {
     super(1, 2);
     this.line = new Line();
   }
 
-
+  /**
+   * @return 2 if the coefficient of x isn't 0, otherwise 0
+   */
   @Override
   public int getDegree() {
     if(coefficient!=0){
@@ -28,7 +34,7 @@ public class Quadratic extends AbstractTerm {
 
   /**
    * @param power
-   * @return Coefficient when power =2/1/0
+   * @return Coefficient when power =2or1or0
    * @throws IllegalArgumentException
    */
   @Override
@@ -94,6 +100,9 @@ public class Quadratic extends AbstractTerm {
     return string;
   }
 
+  /**
+   * @return double this.coefficient if it is not 0
+   */
   @Override
   public double getLeadingCoefficient() {
     if(coefficient!=0){
@@ -102,18 +111,29 @@ public class Quadratic extends AbstractTerm {
     return this.line.getLeadingCoefficient();
   }
 
+  /**
+   * @param number
+   * @return the double result evaluated at input number
+   */
   @Override
   public double evaluateAt(double number) {
     double result =coefficient * Math.sqrt(number) + this.line.evaluateAt(number);
     return result;
   }
 
+  /**
+   * @return a double result when input is 0
+   */
   @Override
   public double getYIntercept() {
     double result = this.line.evaluateAt(0);
     return result;
   }
 
+  /**
+   * @param number
+   * @return true if the polynomial evaluated 0 at this number
+   */
   @Override
   public boolean isRoot(double number) {
     double result =coefficient * Math.sqrt(number) + this.line.evaluateAt(number);

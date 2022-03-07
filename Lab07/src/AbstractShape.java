@@ -8,6 +8,10 @@ public abstract class AbstractShape implements Shape {
     this.reference = reference;
   }
 
+  /**
+   * the result of the distance between two reference point of two abstract shape
+   * @return double result of distance
+   */
   @Override
   public double distanceFromOrigin() {
     return reference.distToOrigin();
@@ -15,7 +19,7 @@ public abstract class AbstractShape implements Shape {
 
 
   /**
-   * compare the perimeter of two shape
+   * compare the perimeter of two abstract shape
    * @param s
    * @return -1 if this perimeter is smaller, otherwise 1
    */

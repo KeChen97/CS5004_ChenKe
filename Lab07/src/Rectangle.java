@@ -20,16 +20,30 @@ public class Rectangle extends AbstractShape {
     this.height = height;
   }
 
+  /**
+   * Computes and returns the area of this rectangle
+   * @return the area of the rectangle
+   */
   @Override
   public double area() {
     return this.width * this.height;
   }
 
+  /**
+   * Computes and returns the perimeter of this rectangle
+   * @return the perimeter of the rectangle
+   */
   @Override
   public double perimeter() {
     return 2 * (this.width + this.height);
   }
 
+  /**
+   * Create and return a rectangle , resized
+   * in area by the provided factor
+   * @param factor factor of resizing
+   * @return the resized rectangle
+   */
   @Override
   public Shape resize(double factor) {
     double sqrtFactor = Math.sqrt(factor);
@@ -40,6 +54,9 @@ public class Rectangle extends AbstractShape {
             sqrtFactor * this.height);
   }
 
+  /**
+   * @return display this rectangle and its left bottom point and width and height
+   */
   public String toString() {
     return String.format("Rectangle: LL corner (%.3f,%.3f) width %.3f height " +
                     "%.3f",

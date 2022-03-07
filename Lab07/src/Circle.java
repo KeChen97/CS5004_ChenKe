@@ -25,22 +25,39 @@ public class Circle extends AbstractShape {
     this.radius = radius;
   }
 
+  /**
+   * Computes and returns the area of this circle
+   * @return the area of the circle
+   */
   @Override
   public double area() {
     return Math.PI * radius * radius;
   }
 
+  /**
+   * Computes and returns the perimeter of this circle.
+   * @return the perimeter of the circle
+   */
   @Override
   public double perimeter() {
     return 2 * Math.PI * radius;
   }
 
+  /**
+   * Create and return a circle , resized
+   * in area by the provided factor
+   * @param factor factor of resizing
+   * @return the resized circle
+   */
   @Override
   public Shape resize(double factor) {
     return new Circle(reference.getX(), reference.getY(), Math.sqrt(factor) *
             radius);
   }
 
+  /**
+   * @return display this circle and its center and radius
+   */
   @Override
   public String toString() {
     return String.format("Circle: center (%.3f,%.3f) radius %.3f",

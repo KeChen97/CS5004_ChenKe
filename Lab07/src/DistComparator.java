@@ -6,7 +6,6 @@ public abstract class DistComparator implements Comparable<Shape> {
     * @param s2
     * @return
     */
-
    public static int compare(Shape s1, Shape s2){
       double dist1 = s1.distanceFromOrigin();
       double dist2 = s2.distanceFromOrigin();

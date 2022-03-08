@@ -11,6 +11,4 @@ public abstract class AbstractTerm implements Polynomial {
     this.coefficient = coefficient;
     this.degree = degree;
   }
-
-
 }

@@ -152,7 +152,7 @@ public class Quadratic extends AbstractTerm {
   public boolean isEqualTo(Polynomial other) {
 
     if(other.getDegree()==this.getDegree() && (Math.abs(other.getLeadingCoefficient()-this.getLeadingCoefficient())<0.01)
-                        && other.getLowerLevel().isEqualTo(this.line)) {
+                        && other.getLowerLevel().isEqualTo(this.getLowerLevel())) {
       return true;
     }
     else {
@@ -172,7 +172,7 @@ public class Quadratic extends AbstractTerm {
       throw new IllegalArgumentException();
     }
     if(coefficient+other.getCoefficient(2)==0){
-      Line newLine = (Line) this.line.plus(other.getLowerLevel());
+      Polynomial newLine =  this.line.plus(other.getLowerLevel());
       return newLine;
     }
     Quadratic newQuad = new Quadratic(coefficient+other.getCoefficient(2) ,

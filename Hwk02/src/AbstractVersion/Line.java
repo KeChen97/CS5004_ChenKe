@@ -35,6 +35,7 @@ public class Line extends AbstractTerm{
   /**
    * @param power
    * @return this.coefficient if input power is 1, return constant if input power is 0
+   * @throws IllegalArgumentException if degree bigger than 2
    */
   @Override
   public double getCoefficient(int power)throws IllegalArgumentException {
@@ -231,21 +232,21 @@ public class Line extends AbstractTerm{
       result = new Quadratic(coefficient1, new Line(coefficient2, new Constant(coefficient3)));
     }
 
-    //if this.degree is 1, other degree is 0
-    if(this.getDegree()==0 && other.getDegree()==1) {
-      double coefficient1 = 0;
-      double coefficient2 = other.getCoefficient(1) * this.getCoefficient(0);
-      double coefficient3 = this.constant.getLeadingCoefficient() * other.getCoefficient(0);
-      result = new Quadratic(coefficient1, new Line(coefficient2, new Constant(coefficient3)));
-    }
-
-    //if both degree are 0
-    if(this.getDegree()==0 && other.getDegree()==0) {
-      double coefficient1 = 0;
-      double coefficient2 = 0;
-      double coefficient3 = this.constant.getLeadingCoefficient() * other.getCoefficient(0);
-      result = new Quadratic(coefficient1, new Line(coefficient2, new Constant(coefficient3)));
-    }
+//    //if this.degree is 0, other degree is 1
+//    if(this.getDegree()==0 && other.getDegree()==1) {
+//      double coefficient1 = 0;
+//      double coefficient2 = other.getCoefficient(1) * this.getCoefficient(0);
+//      double coefficient3 = this.constant.getLeadingCoefficient() * other.getCoefficient(0);
+//      result = new Quadratic(coefficient1, new Line(coefficient2, new Constant(coefficient3)));
+//    }
+//
+//    //if both degree are 0
+//    if(this.getDegree()==0 && other.getDegree()==0) {
+//      double coefficient1 = 0;
+//      double coefficient2 = 0;
+//      double coefficient3 = this.constant.getLeadingCoefficient() * other.getCoefficient(0);
+//      result = new Quadratic(coefficient1, new Line(coefficient2, new Constant(coefficient3)));
+//    }
     return result;
   }
 }

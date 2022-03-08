@@ -5,6 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * this is a test class for polynomial test
+ */
 public class PolynomialTest {
   private Constant constant;
   private Constant constant2;
@@ -14,6 +17,7 @@ public class PolynomialTest {
   private Line line3;
   private Quadratic quadratic;
   private Quadratic quadratic2;
+  private Quadratic quadratic3;
 
   @Before
   public void setUp() throws Exception {
@@ -25,6 +29,7 @@ public class PolynomialTest {
     this.line3 = new Line();    //p(x)=x
     this.quadratic = new Quadratic(2.5,this.line);    //2.5x^2+2.56x+1.7
     this.quadratic2 = new Quadratic(1.5,this.line2); //1.5x^2+1.7
+    this.quadratic3 = new Quadratic(1,new Line(-2,new Constant(1))); //x^2-2x+1
   }
 
   //test getDegree
@@ -37,6 +42,7 @@ public class PolynomialTest {
     assertEquals(1,this.line3.getDegree());
     assertEquals(2,this.quadratic.getDegree());
     assertEquals(2,this.quadratic2.getDegree());
+    assertEquals(2,this.quadratic3.getDegree());
   }
 
   //test getCoefficient
@@ -50,6 +56,7 @@ public class PolynomialTest {
     assertEquals(0.0,this.line3.getCoefficient(0),0.01);
     assertEquals(2.5,this.quadratic.getCoefficient(2),0.01);
     assertEquals(1.5,this.quadratic2.getCoefficient(2),0.01);
+    assertEquals(-2,this.quadratic3.getCoefficient(1),0.01);
   }
 
   //test getString
@@ -71,8 +78,8 @@ public class PolynomialTest {
     //test quadratic
     assertEquals("2.5x^2+2.6x+1.7",this.quadratic.getString());
     assertEquals("1.5x^2+1.7",this.quadratic2.getString());
-    Quadratic quadratic3 = new Quadratic(-2.5,new Line(-1,new Constant(0)));
-    assertEquals("-2.5x^2-x",quadratic3.getString());
+    Quadratic quadratic4 = new Quadratic(-2.5,new Line(-1,new Constant(0)));
+    assertEquals("-2.5x^2-x",quadratic4.getString());
   }
 
   //test LeadingCoefficient
@@ -85,6 +92,7 @@ public class PolynomialTest {
     assertEquals(1,this.line3.getLeadingCoefficient(),0.01);
     assertEquals(2.5,this.quadratic.getLeadingCoefficient(),0.01);
     assertEquals(1.5,this.quadratic2.getLeadingCoefficient(),0.01);
+    assertEquals(1,this.quadratic3.getLeadingCoefficient(),0.01);
 
   }
 
@@ -99,6 +107,7 @@ public class PolynomialTest {
     assertEquals(100,this.line3.evaluateAt(100),0.01);
     assertEquals(1.66,this.quadratic.evaluateAt(0),0.01);
     assertEquals(3.16,this.quadratic2.evaluateAt(1),0.01);
+    assertEquals(0,this.quadratic3.evaluateAt(1),0.01);
 
   }
 
@@ -111,7 +120,7 @@ public class PolynomialTest {
     assertEquals(0,this.line3.getYIntercept(),0.01);
     assertEquals(1.66,this.quadratic.getYIntercept(),0.01);
     assertEquals(1.66,this.quadratic2.getYIntercept(),0.01);
-
+    assertEquals(1,this.quadratic3.getYIntercept(),0.01);
   }
 
   @Test
@@ -123,6 +132,7 @@ public class PolynomialTest {
     assertTrue(this.line3.isRoot(0));
     assertFalse(this.quadratic.isRoot(0));
     assertFalse(this.quadratic2.isRoot(0));
+    assertTrue(this.quadratic3.isRoot(1));
   }
 
   @Test
@@ -138,8 +148,8 @@ public class PolynomialTest {
     assertFalse(this.line.isEqualTo(this.line2));
     assertFalse(this.line2.isEqualTo(this.constant));
     //test quadratic isEqualTo
-    Quadratic quadratic3 = new Quadratic(2.5,this.line);
-    assertTrue(this.quadratic.isEqualTo(quadratic3));
+    Quadratic quadratic4 = new Quadratic(2.5,this.line);
+    assertTrue(this.quadratic.isEqualTo(quadratic4));
     assertFalse(this.quadratic.isEqualTo(this.quadratic2));
   }
 
@@ -156,10 +166,16 @@ public class PolynomialTest {
     assertTrue(this.line.plus(this.line3).isEqualTo(line4));  //3.56x+1.66
 
     //test quadratic plus
-    Quadratic quadratic3 = new Quadratic(4.0,this.line.plus(this.line2));
-    assertTrue(quadratic3.isEqualTo(this.quadratic.plus(this.quadratic2)));
+    Quadratic quadratic4 = new Quadratic(4.0,this.line.plus(this.line2));
+    assertTrue(quadratic4.isEqualTo(this.quadratic.plus(this.quadratic2)));
 
+    //test quadratic plus when the leading coefficient is 0
+    //q5 = -x^2+2x+1    q3 = x^2-2x+1   q3+q5 = 2
+    Quadratic quadratic5 = new Quadratic(-1,new Line(2,new Constant(1)));
+    Constant constant2 = new Constant(2);
+    assertTrue(constant2.isEqualTo(quadratic5.plus(this.quadratic3)));
   }
+
 
   @Test
   public void translate() {
@@ -192,6 +208,8 @@ public class PolynomialTest {
     // (2.56x + 1.66 ) * x
     quadratic3 = new Quadratic(2.56,new Line(1.66, new Constant()));
     assertTrue((this.line.multiply(this.line3)).isEqualTo(quadratic3));
+    //  0*(2.56x + 1.66 )
+    assertTrue((this.zero.multiply(this.line3)).isEqualTo(this.zero));
 
     //test quadratic.multiply  (2.5x^2+2.56x+1.7) * 0
     quadratic3 = new Quadratic(0,new Line(0, new Constant(Math.pow(0,2))));
@@ -199,6 +217,10 @@ public class PolynomialTest {
     //  (2.5x^2+2.56x+1.7) * 1.66
     quadratic3 = new Quadratic(2.5*1.66,new Line(2.56*1.66, new Constant(1.66*1.66)));
     assertTrue(quadratic3.isEqualTo(this.quadratic.multiply(this.constant)));
+  }
 
+  @Test  (expected = IllegalArgumentException.class)
+  public void illegalMultiply(){
+    this.line3.multiply(this.quadratic3);
   }
 }

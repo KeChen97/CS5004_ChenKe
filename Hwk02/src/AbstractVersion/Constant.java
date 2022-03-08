@@ -5,7 +5,7 @@ public class Constant extends AbstractTerm {
   /**
    * Constructs a constant and initializes it
    *
-   * @param
+   * @param coefficient,double
    */
   public Constant(double coefficient) {
     super(coefficient, 0);
@@ -27,12 +27,12 @@ public class Constant extends AbstractTerm {
   }
 
   /**
+   * get coefficient
    * @param power
    * @return this constant if input power is 0
-   * @throws IllegalArgumentException if input is not zero because this is a constant
    */
   @Override
-  public double getCoefficient(int power) throws IllegalArgumentException {
+  public double getCoefficient(int power)  {
     if (power == 0) {
       return coefficient;
     }
@@ -123,6 +123,8 @@ public class Constant extends AbstractTerm {
     Constant newConstant = new Constant(other.getCoefficient(0) + coefficient);
     return newConstant;
   }
+
+
 
   /**
    * @param dx

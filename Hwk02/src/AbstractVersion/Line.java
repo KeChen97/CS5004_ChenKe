@@ -6,7 +6,7 @@ public class Line extends AbstractTerm{
   /**
    * Constructs a line and initializes it
    *
-   * @param
+   * @param coefficient and default degree =1, and constant part
    */
   public Line(double coefficient, Constant constant) {
     super(coefficient, 1);
@@ -21,7 +21,8 @@ public class Line extends AbstractTerm{
   }
 
   /**
-   * @return 1 if the coefficient of x isn't 0, otherwise 0
+   * return 1 if the coefficient isn't 0, otherwise return the lower level's degree
+   * @return
    */
   @Override
   public int getDegree() {
@@ -33,8 +34,9 @@ public class Line extends AbstractTerm{
   }
 
   /**
+   * return this. coefficient if input power is 1, return constant if input power is 0
    * @param power
-   * @return this.coefficient if input power is 1, return constant if input power is 0
+   * @return
    * @throws IllegalArgumentException if degree bigger than 2
    */
   @Override
@@ -54,6 +56,7 @@ public class Line extends AbstractTerm{
   }
 
   /**
+   * Lower level of a line is constant
    * @return constant part
    */
   @Override
@@ -62,10 +65,11 @@ public class Line extends AbstractTerm{
   }
 
   /**
-   * @return Display this line
+   * Display this line
+   * @return
    */
   @Override
-  public String getString() {
+  public String toString() {
     String sl = "";
     String string = "";
     if(coefficient!=0){
@@ -84,10 +88,10 @@ public class Line extends AbstractTerm{
     if (this.constant.getCoefficient(0) != 0) {
 
       if (this.constant.getCoefficient(0) > 0) {
-        string = sl + "+" + this.constant.getString();
+        string = sl + "+" + this.constant.toString();
       }
       else if(this.constant.getCoefficient(0) <0){
-        string = sl +  this.constant.getString();
+        string = sl +  this.constant.toString();
       }
       else {
         string = sl+string;
@@ -100,27 +104,30 @@ public class Line extends AbstractTerm{
   }
    //if coefficient is 0
     else{
-    string = this.constant.getString();
+    string = this.constant.toString();
   }
     return string;
   }
 
   /**
-   * @return double this.coefficient if it is not 0
+   * get leading coefficient
+   * @return this.coefficient if it is not 0
    */
   @Override
   public double getLeadingCoefficient() {
     if(this.coefficient!=0) {
       return this.coefficient;
     }
+    //if the this.coefficient=0, this polynomial does not have line part
     else{
       return this.constant.getCoefficient(0);
     }
   }
 
   /**
+   * the line polynomial's result evaluated at input number
    * @param number
-   * @return the double result evaluated at input number
+   * @return a double result
    */
   @Override
   public double evaluateAt(double number) {
@@ -129,6 +136,7 @@ public class Line extends AbstractTerm{
   }
 
   /**
+   * the line polynomial's result evaluated at 0
    * @return a double result when input is 0
    */
   @Override
@@ -138,8 +146,9 @@ public class Line extends AbstractTerm{
   }
 
   /**
+   * return true if the polynomial evaluated 0 at this number
    * @param number
-   * @return true if the polynomial evaluated 0 at this number
+   * @return
    */
   @Override
   public boolean isRoot(double number) {
@@ -152,11 +161,14 @@ public class Line extends AbstractTerm{
 
   /**
    * compare the degree and every coefficient
-   * @param other
+   * @param other another Polynomial object
    * @return
    */
   @Override
   public boolean isEqualTo(Polynomial other) {
+    if (! (other instanceof Polynomial)){
+      return false;
+    }
     if(other.getDegree() == this.getDegree() && (Math.abs(other.getLeadingCoefficient()-this.getLeadingCoefficient())<0.01)
         && other.getLowerLevel().isEqualTo(this.constant)){
       return true;
@@ -168,13 +180,16 @@ public class Line extends AbstractTerm{
 
   /**
    * add coefficient for every term
-   * @param other
+   * @param other another Polynomial object
    * @return
    * @throws IllegalArgumentException
    */
   @Override
   public Polynomial plus(Polynomial other) throws IllegalArgumentException {
-    if(other.getDegree()>2){
+    if (! (other instanceof Polynomial)){
+      throw new IllegalArgumentException();
+    }
+    if(other.getDegree()>2) {
       throw new IllegalArgumentException();
     }
     if(coefficient+other.getCoefficient(1)==0){
@@ -203,7 +218,7 @@ public class Line extends AbstractTerm{
 
   /**
    * takes another polynomial of degree 0 or 1 and returns the polynomial obtained by multiplying the two
-   * @param other
+   * @param other another Polynomial object
    * @return
    * @throws IllegalArgumentException if degree >=2
    */

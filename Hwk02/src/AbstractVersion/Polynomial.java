@@ -12,7 +12,7 @@ package AbstractVersion;
 
     /**
      *
-     * @param power
+     * @param power an int number
      * @return the coefficient for the term with that power
      */
     public double getCoefficient(int power);
@@ -22,28 +22,23 @@ package AbstractVersion;
      */
     public Polynomial getLowerLevel();
 
-    /**
-     *
-     * @return String: representation of the term
-     */
-    public String getString();
 
     /**
-     *
-     * @return String: representation of the polynomial
+     * representation of the polynomial
+     * @return String
      */
     public String toString();
 
     /**
-     *
-     * @return the leading coefficient
+     * get the leading coefficient
+     * @return double number
      */
     public double getLeadingCoefficient();
 
     /**
-     *
+     * return the result the polynomial at that number
      * @param number
-     * @return the polynomial at that number
+     * @return
      */
     public double evaluateAt(double number);
 
@@ -54,22 +49,22 @@ package AbstractVersion;
     public double getYIntercept();
 
     /**
-     * If the input
+     * If the input is 0 at that number, return true.
      * @param number
-     * @return true if the polynomial is 0 at that number
+     * @return
      */
     public boolean isRoot(double number);
 
     /**
-     *
-     * @param other
+     * if the two polynomial is equal, return true.
+     * @param other  another Polynomial object
      * @return
      */
     public boolean isEqualTo(Polynomial other);
 
     /**
-     *
-     * @param other
+     * Add two polynomials
+     * @param other  another Polynomial object
      * @return polynomial by adding two polynomials
      */
     public Polynomial plus(Polynomial other) throws IllegalArgumentException;

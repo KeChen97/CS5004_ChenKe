@@ -20,7 +20,8 @@ public class Quadratic extends AbstractTerm {
   }
 
   /**
-   * @return 2 if the coefficient of x isn't 0, otherwise 0
+   * 2 if the coefficient of x isn't 0, otherwise return the lower level's degree
+   * @return
    */
   @Override
   public int getDegree() {
@@ -33,6 +34,7 @@ public class Quadratic extends AbstractTerm {
   }
 
   /**
+   * return this. coefficient if input power is 2, return lower level's if input power is 1 or 0
    * @param power
    * @return Coefficient when power =2or1or0
    * @throws IllegalArgumentException
@@ -54,6 +56,7 @@ public class Quadratic extends AbstractTerm {
   }
 
   /**
+   * Lower level of a quadratic is line
    * @return Line part
    */
   @Override
@@ -61,8 +64,12 @@ public class Quadratic extends AbstractTerm {
     return this.line;
   }
 
+  /**
+   * Display this quadratic
+   * @return
+   */
   @Override
-  public String getString() {
+  public String toString() {
     String sQuad = "";
     String sLine = "";
     String string = "";
@@ -78,42 +85,44 @@ public class Quadratic extends AbstractTerm {
       }
       // Line part
       if(this.line.getCoefficient(1)>0) {
-        string = sQuad + "+" + this.line.getString();
+        string = sQuad + "+" + this.line.toString();
       }
       else if(this.line.getCoefficient(1)<0){
-        string = sQuad +  this.line.getString();
+        string = sQuad +  this.line.toString();
       }
       else{
         if(this.line.getCoefficient(0)==0){
           string = sQuad ;
         }
         else{
-          string = sQuad +"+" + this.line.getString();
+          string = sQuad +"+" + this.line.toString();
         }
       }
     }
     //if coefficient is 0
     else{
-      string = sQuad + this.line.getString();
+      string = sQuad + this.line.toString();
     }
-
     return string;
   }
 
   /**
-   * @return double this.coefficient if it is not 0
+   * get leading coefficient
+   * @return
    */
   @Override
   public double getLeadingCoefficient() {
     if(coefficient!=0){
       return coefficient;
     }
+    //if the this.coefficient=0, this polynomial does not have quadratic part
     return this.line.getLeadingCoefficient();
   }
 
   /**
+   * return the double result evaluated at input number
    * @param number
-   * @return the double result evaluated at input number
+   * @return
    */
   @Override
   public double evaluateAt(double number) {
@@ -122,6 +131,7 @@ public class Quadratic extends AbstractTerm {
   }
 
   /**
+   * the quadratic polynomial's result evaluated at 0
    * @return a double result when input is 0
    */
   @Override
@@ -131,8 +141,9 @@ public class Quadratic extends AbstractTerm {
   }
 
   /**
+   * return true if the polynomial evaluated 0 at this number
    * @param number
-   * @return true if the polynomial evaluated 0 at this number
+   * @return
    */
   @Override
   public boolean isRoot(double number) {
@@ -145,12 +156,14 @@ public class Quadratic extends AbstractTerm {
 
   /**
    * compare the degree and every coefficient
-   * @param other
+   * @param other another Polynomial object
    * @return
    */
   @Override
   public boolean isEqualTo(Polynomial other) {
-
+    if (! (other instanceof Polynomial)){
+      return false;
+    }
     if(other.getDegree()==this.getDegree() && (Math.abs(other.getLeadingCoefficient()-this.getLeadingCoefficient())<0.01)
                         && other.getLowerLevel().isEqualTo(this.getLowerLevel())) {
       return true;
@@ -162,12 +175,15 @@ public class Quadratic extends AbstractTerm {
 
   /**
    * add coefficient for every term
-   * @param other
+   * @param other another Polynomial object
    * @return
    * @throws IllegalArgumentException
    */
   @Override
   public Polynomial plus(Polynomial other) throws IllegalArgumentException {
+    if (! (other instanceof Polynomial)){
+      throw new IllegalArgumentException();
+    }
     if(other.getDegree()>2){
       throw new IllegalArgumentException();
     }
@@ -199,13 +215,16 @@ public class Quadratic extends AbstractTerm {
   }
 
   /**
-   * input polynomial's degree is zero , in case the result polynomial may be degree bigger than 2
-   * @param other
+   * input polynomial's degree could only be zero in case the result polynomial's degree may be bigger than 2
+   * @param other another Polynomial object
    * @return
    * @throws IllegalArgumentException
    */
   @Override
   public Polynomial multiply(Polynomial other) throws IllegalArgumentException {
+    if (! (other instanceof Polynomial)){
+      throw new IllegalArgumentException();
+    }
     if(other.getDegree()>0){
       throw new IllegalArgumentException();
     }

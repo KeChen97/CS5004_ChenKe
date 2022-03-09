@@ -64,22 +64,22 @@ public class PolynomialTest {
   //coefficient if it is 1.
   @Test
   public void getString() {
-    assertEquals("1.7",this.constant.getString());
-    assertEquals("3.2",this.constant2.getString());
-    assertEquals("0.0",this.zero.getString());
+    assertEquals("1.7",this.constant.toString());
+    assertEquals("3.2",this.constant2.toString());
+    assertEquals("0.0",this.zero.toString());
 
     //test line
-    assertEquals("2.6x+1.7",this.line.getString());
-    assertEquals("1.7",this.line2.getString());
-    assertEquals("x",this.line3.getString());
+    assertEquals("2.6x+1.7",this.line.toString());
+    assertEquals("1.7",this.line2.toString());
+    assertEquals("x",this.line3.toString());
     Line line4 = new Line(-1,new Constant(1.52));
-    assertEquals("-x+1.5",line4.getString());
+    assertEquals("-x+1.5",line4.toString());
 
     //test quadratic
-    assertEquals("2.5x^2+2.6x+1.7",this.quadratic.getString());
-    assertEquals("1.5x^2+1.7",this.quadratic2.getString());
+    assertEquals("2.5x^2+2.6x+1.7",this.quadratic.toString());
+    assertEquals("1.5x^2+1.7",this.quadratic2.toString());
     Quadratic quadratic4 = new Quadratic(-2.5,new Line(-1,new Constant(0)));
-    assertEquals("-2.5x^2-x",quadratic4.getString());
+    assertEquals("-2.5x^2-x",quadratic4.toString());
   }
 
   //test LeadingCoefficient

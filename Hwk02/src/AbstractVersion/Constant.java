@@ -19,7 +19,8 @@ public class Constant extends AbstractTerm {
   }
 
   /**
-   * @return int: degree of this constant
+   * degree of this constant is 0
+   * @return 0
    */
   @Override
   public int getDegree() {
@@ -39,7 +40,10 @@ public class Constant extends AbstractTerm {
     return 0;
   }
 
-  //Lower level of a constant is empty = 0
+  /**
+   * Lower level of a constant is empty = 0
+   * @return
+   */
   @Override
   public Polynomial getLowerLevel() {
     return new Constant();
@@ -50,13 +54,14 @@ public class Constant extends AbstractTerm {
    * @return string
    */
   @Override
-  public String getString() {
+  public String toString() {
     String s =  String.format("%.1f",coefficient);
     return s;
   }
 
   /**
-   * @return leading coefficient
+   * get leading coefficient
+   * @return
    */
   @Override
   public double getLeadingCoefficient() {
@@ -64,8 +69,9 @@ public class Constant extends AbstractTerm {
   }
 
   /**
+   * the constant polynomial's result evaluated at input number is just this constant
    * @param number
-   * @return the polynomial evaluated at input number
+   * @return
    */
   @Override
   public double evaluateAt(double number) {
@@ -95,12 +101,16 @@ public class Constant extends AbstractTerm {
   }
 
   /**
-   *
-   * @param other
+   * if the two polynomial is equal, return true.
+   * @param other another Polynomial object
    * @return true if the constant is the same
    */
   @Override
   public boolean isEqualTo(Polynomial other) {
+    if (! (other instanceof Polynomial)){
+      return false;
+    }
+
     if(other.getDegree() == this.getDegree() &&
         (Math.abs(other.getLeadingCoefficient()-this.getLeadingCoefficient())<0.01) ){
       return true;
@@ -111,9 +121,10 @@ public class Constant extends AbstractTerm {
   }
 
   /**
-   * @param other
+   * Add two polynomials
+   * @param other another Polynomial object
    * @return a new polynomial by adding two polynomials together
-   * @throws IllegalArgumentException
+   * @throws IllegalArgumentException if degree>2
    */
   @Override
   public Constant plus(Polynomial other) throws IllegalArgumentException {
@@ -127,9 +138,10 @@ public class Constant extends AbstractTerm {
 
 
   /**
+   * return a new constant polynomial with increment dy
    * @param dx
    * @param dy
-   * @return A new constant polynomial with increment dy
+   * @return a new constant polynomial
    */
   @Override
   public Polynomial translate(double dx, double dy) {
@@ -139,7 +151,7 @@ public class Constant extends AbstractTerm {
 
   /**
    * takes another polynomial of degree 0 or 1 and returns the polynomial obtained by multiplying the two
-   * @param other
+   * @param other another Polynomial object
    * @return
    * @throws IllegalArgumentException if degree >=2
    */

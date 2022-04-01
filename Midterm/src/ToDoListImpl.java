@@ -1,12 +1,13 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class ToDoListImpl implements ToDoList{
-  LinkedList<ToDoItem> list;
+public class ToDoListImpl implements ToDoList {
+
+  LinkedList<ToDoItem> list = new LinkedList<ToDoItem>();
 
   /**
-   * Constructs a ToDOList  and initializes it
-   * to give a list of ToDoItems
+   * Constructs a ToDOList  and initializes it to give a list of ToDoItems
+   *
    * @param list the list of ToDoItems
    */
   public ToDoListImpl(List<ToDoItem> list) {
@@ -20,7 +21,7 @@ public class ToDoListImpl implements ToDoList{
 
   @Override
   public ToDoItem getItem(int i) throws IllegalArgumentException {
-    if(i<0 || i>this.list.size()){
+    if (i < 0 || i > this.list.size()) {
       throw new IllegalArgumentException("Index i should be in the list size range");
     }
     return this.list.get(i);
@@ -28,7 +29,7 @@ public class ToDoListImpl implements ToDoList{
 
   @Override
   public void deleteItem(int i) throws IllegalArgumentException {
-    if(i<0 || i>this.list.size()){
+    if (i < 0 || i > this.list.size()) {
       throw new IllegalArgumentException("Index i should be in the list size range");
     }
     this.list.remove(i);
@@ -47,10 +48,10 @@ public class ToDoListImpl implements ToDoList{
   }
 
   @Override
-  public String toString(){
-    String s ="The to do list is: \n";
-    for(ToDoItem t:list){
-      s= s + t.toString();
+  public String toString() {
+    String s = "The to do list is: \n";
+    for (ToDoItem t : list) {
+      s = s + t.toString();
     }
     return s;
   }

@@ -28,7 +28,10 @@ public class ToDoItemHome extends ToDoItemImpl {
    * @return the result of the comparison
    */
   @Override
-  public int compareTo(ToDoItem other) {
+  public int compareTo(ToDoItem other) throws IllegalArgumentException {
+    if (other == null) {
+      throw new IllegalArgumentException("Cannot compare to a null item");
+    }
     if (this.importance < other.getImportance()) {
       return -1;
     } else if (this.importance > other.getImportance()) {
@@ -46,12 +49,16 @@ public class ToDoItemHome extends ToDoItemImpl {
    */
   @Override
   public boolean equalTo(ToDoItem other) {
-    if (!(other instanceof ToDoItemSchool)) {
+    if (other == null) {
+      return false;
+    }
+    if (!(other instanceof ToDoItemHome)) {
       return false;
     }
     if (name.equals(other.getName()) && this.status == other.getStatus()
         && this.category == other.getCategory()
-        && this.importance == other.getImportance() && this.comments.equals(other.getComments())) {
+        && this.importance == other.getImportance() && this.getComments()
+        .equals(other.getComments())) {
       return true;
     } else {
       return false;
@@ -66,7 +73,7 @@ public class ToDoItemHome extends ToDoItemImpl {
   @Override
   public String toString() {
     String s = "Item:" + name + " Status: " + this.status + " Category:" + this.category
-        + " Importance:" + this.importance + " Comments: " + this.comments.toString();
+        + " Importance:" + this.importance + " Comments: " + this.getComments();
     s = s + "\n";
     return s;
   }

@@ -5,7 +5,7 @@ import java.util.Comparator;
  */
 public class ImportanceComparator implements Comparator<ToDoItem> {
   @Override
-  public int compare(ToDoItem item1, ToDoItem item2) {
+  public static int compare(ToDoItem item1, ToDoItem item2) {
     int importance1 = item1.getImportance();
     int importance2 = item2.getImportance();
     if(importance1<importance2){

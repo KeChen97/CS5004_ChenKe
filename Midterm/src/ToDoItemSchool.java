@@ -1,8 +1,10 @@
 import java.util.List;
+
 /**
  * Concrete class for ToDoItemSchool,which category is SCHOOL
  */
 public class ToDoItemSchool extends ToDoItemImpl {
+
   private int urgency;
 
   /**
@@ -49,12 +51,16 @@ public class ToDoItemSchool extends ToDoItemImpl {
    */
   @Override
   public boolean equalTo(ToDoItem other) {
-//    if (!(other instanceof ToDoItemSchool)) {
-//      return false;
-//    }
+    if (other == null) {
+      return false;
+    }
+    if (!(other instanceof ToDoItemSchool)) {
+      return false;
+    }
     if (name.equals(other.getName()) && this.status == other.getStatus()
         && this.category == other.getCategory()
-        && this.importance == other.getImportance() && this.comments.equals(other.getComments())
+        && this.importance == other.getImportance() && this.getComments()
+        .equals(other.getComments())
         && this.urgency == ((ToDoItemSchool) other).getUrgency()) {
       return true;
     } else {
@@ -71,7 +77,7 @@ public class ToDoItemSchool extends ToDoItemImpl {
   public String toString() {
     String s = "Item:" + name + " Status: " + this.status + " Category:" + this.category
         + " Importance:" + this.importance + " Days left before deadline:" + this.urgency
-        + " Comments: " + this.comments.toString();
+        + " Comments: " + this.getComments();
     s = s + "\n";
     return s;
   }

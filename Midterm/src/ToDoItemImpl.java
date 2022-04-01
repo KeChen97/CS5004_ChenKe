@@ -4,6 +4,7 @@ import java.util.List;
  * This is the concrete class for ToDoItem, containing all the operations
  */
 public abstract class ToDoItemImpl extends ToDoItemAbstract {
+
   protected Status status;
   protected ToDoItemCategory category;
   protected int importance;
@@ -19,7 +20,7 @@ public abstract class ToDoItemImpl extends ToDoItemAbstract {
    * @param comments   a list of String containing all the string comments
    */
   public ToDoItemImpl(String name, Status status,
-                      ToDoItemCategory category, int importance, List<String> comments) {
+      ToDoItemCategory category, int importance, List<String> comments) {
     super(name);
     this.status = status;
     this.category = category;
@@ -69,7 +70,10 @@ public abstract class ToDoItemImpl extends ToDoItemAbstract {
   }
 
   @Override
-  public int compareTo(ToDoItem other) {
+  public int compareTo(ToDoItem other) throws IllegalArgumentException {
+    if (other == null) {
+      throw new IllegalArgumentException("Cannot compare to a null item");
+    }
     if (this.importance < other.getImportance()) {
       return -1;
     } else if (this.importance > other.getImportance()) {

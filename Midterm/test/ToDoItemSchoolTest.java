@@ -12,6 +12,7 @@ public class ToDoItemSchoolTest {
   ToDoItemSchool item2;
   ToDoItemSchool item3;
 
+
   @org.junit.Before
   public void setUp() throws Exception {
     List<String> comment1 = new LinkedList<>();

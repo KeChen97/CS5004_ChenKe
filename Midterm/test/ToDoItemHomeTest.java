@@ -15,11 +15,11 @@ public class ToDoItemHomeTest {
   @Before
   public void setUp() throws Exception {
     List<String> comment1 = new LinkedList<>();
-    comment1.add("Laundry");
+    comment1.add("Clothes");
     item1 = new ToDoItemHome("Laundry", Status.UNSTARTED, ToDoItemCategory.HOME, 4, comment1);
     item3 = new ToDoItemHome("Laundry", Status.UNSTARTED, ToDoItemCategory.HOME, 4, comment1);
     List<String> comment2 = new LinkedList<>();
-    comment2.add("dishes");
+    comment2.add("bowls");
     item2 = new ToDoItemHome("DishWashing", Status.COMPLETED, ToDoItemCategory.HOME, 2, comment2);
 
   }
@@ -65,24 +65,41 @@ public class ToDoItemHomeTest {
   }
 
   @Test
-  public void addComment() {
+  public void getComments() {
+    List<String> comment3 = new LinkedList<>();
+    comment3.add("Clothes");
+    assertEquals(comment3.toString(),this.item1.getComments());
+    List<String> comment4 = new LinkedList<>();
+    comment4.add("bowls");
+    assertEquals(comment4.toString(),this.item2.getComments());
   }
 
   @Test
-  public void getComments() {
+  public void addComment() {
+    this.item1.addComment("pants");
+    List<String> comment3 = new LinkedList<>();
+    comment3.add("Clothes"); comment3.add("pants");
+    assertEquals(comment3.toString(),this.item1.getComments());
+
+    this.item2.addComment("plates");
+    List<String> comment4 = new LinkedList<>();
+    comment4.add("bowls"); comment4.add("plates");
+    assertEquals(comment4.toString(),this.item2.getComments());
   }
+
+
 
   @Test
   public void compareTo() {
+    assertEquals(1,this.item1.compareTo(this.item2));
 
   }
 
-  @Test
-  public void testCompareTo() {
-  }
 
   @Test
   public void equalTo() {
+    assertFalse(this.item1.equalTo(this.item2));
+    assertTrue(this.item1.equalTo(this.item3));
   }
 
   @Test

@@ -3,7 +3,7 @@ import java.util.List;
 
 public class ToDoListImpl implements ToDoList {
 
-  LinkedList<ToDoItem> list = new LinkedList<ToDoItem>();
+   List<ToDoItem> list;
 
   /**
    * Constructs a ToDOList  and initializes it to give a list of ToDoItems
@@ -11,7 +11,11 @@ public class ToDoListImpl implements ToDoList {
    * @param list the list of ToDoItems
    */
   public ToDoListImpl(List<ToDoItem> list) {
-    this.list = (LinkedList<ToDoItem>) list;
+    this.list = (List<ToDoItem>) list;
+  }
+
+  public ToDoListImpl() {
+    this.list =  new LinkedList<ToDoItem>();
   }
 
   @Override

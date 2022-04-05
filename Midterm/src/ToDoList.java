@@ -26,7 +26,10 @@ public interface ToDoList {
   void deleteItem(int i) throws IllegalArgumentException;
 
   /**
-   * Returns a ToDoList sorted by urgency
+   * Returns a ToDoList sorted by urgency,
+   * if urgency is negative, which means it past the due，so that it will be sorted later
+   * 0 means it is due today.Positive means you have more days to complete it.
+   * Therefore, if the urgency is 0 or positive, it will be sorted in ascending order. if it is negative, it will be in later position than those urgencies are not negative
    * @return a ToDoList sorted by urgency
    */
   ToDoList sortByUrgency();

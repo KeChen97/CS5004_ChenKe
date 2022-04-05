@@ -1,6 +1,7 @@
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -96,6 +97,7 @@ public class ToDoItemSchoolTest {
   @org.junit.Test
   public void compareTo() {
     assertEquals(1,this.item1.compareTo(this.item2));
+    assertEquals(0,this.item1.compareTo(this.item3));
   }
 
   @org.junit.Test
@@ -115,9 +117,13 @@ public class ToDoItemSchoolTest {
   @org.junit.Test
   public void equalTo() {
     assertFalse(this.item1.equalTo(this.item2));
+    assertTrue(this.item1.equalTo(this.item3));
   }
 
   @org.junit.Test
   public void testToString() {
+    assertEquals("Item:lab Status:UNSTARTED Category:SCHOOL Importance:9 Days left before deadline:3 Comments:[5004lab]\n",item1.toString());
+    assertEquals("Item:Homework Status:COMPLETED Category:SCHOOL Importance:2 Days left before deadline:2 Comments:[5004Homework]\n",item2.toString());
+
   }
 }

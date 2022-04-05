@@ -72,8 +72,8 @@ public class ToDoItemHome extends ToDoItemImpl {
    */
   @Override
   public String toString() {
-    String s = "Item:" + name + " Status: " + this.status + " Category:" + this.category
-        + " Importance:" + this.importance + " Comments: " + this.getComments();
+    String s = "Item:" + name + " Status:" + this.status + " Category:" + this.category
+        + " Importance:" + this.importance + " Comments:" + this.getComments();
     s = s + "\n";
     return s;
   }

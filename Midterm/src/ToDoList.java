@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * This interface contains all operations that all types of items
  * should support.
@@ -32,12 +34,12 @@ public interface ToDoList {
    * Therefore, if the urgency is 0 or positive, it will be sorted in ascending order. if it is negative, it will be in later position than those urgencies are not negative
    * @return a ToDoList sorted by urgency
    */
-  ToDoList sortByUrgency();
+  List<ToDoItem> sortByUrgency();
 
   /**
    * Returns a ToDoList sorted by importance.
    * @return a ToDoList sorted by importance.
    */
-  ToDoList sortByImportance();
+  List<ToDoItem> sortByImportance();
 
 }

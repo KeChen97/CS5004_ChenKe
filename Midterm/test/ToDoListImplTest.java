@@ -86,7 +86,11 @@ public class ToDoListImplTest {
     String s = "The to do list is: \n";
     s = s + this.item4.toString() + this.item5.toString() + this.item6.toString();
     assertEquals(s,this.list2.toString());
-   // this.list2.sortByUrgency();
+    this.list2.sortByUrgency();
+    // urgency of item4 item5 and item6 is 3 3 2, so the order of this list should be item6-item4-item5
+    String s2 = "The to do list is: \n";
+    s2 = s2 + this.item6.toString() + this.item4.toString() + this.item5.toString();
+    assertEquals(s2,this.list2.toString());
   }
 
   @Test
@@ -97,9 +101,9 @@ public class ToDoListImplTest {
     s = s + this.item1.toString() + this.item2.toString() + this.item3.toString();
     assertEquals(s,this.list1.toString());
     this.list1.sortByImportance();
-
+    // importance of item1 item2 and item3 is 4 1 2, so the order of this list should be item2-item3-item1
     String s2 = "The to do list is: \n";
-    s = s + this.item2.toString() + this.item3.toString() + this.item1.toString();
+    s2 = s2 + this.item2.toString() + this.item3.toString() + this.item1.toString();
     assertEquals(s2,this.list1.toString());
   }
 

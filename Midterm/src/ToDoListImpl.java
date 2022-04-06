@@ -40,15 +40,15 @@ public class ToDoListImpl implements ToDoList {
   }
 
   @Override
-  public ToDoList sortByUrgency() {
+  public List<ToDoItem> sortByUrgency() {
     this.list.sort(new UrgencyComparator());
-    return (ToDoList) this.list;
+    return this.list;
   }
 
   @Override
-  public ToDoList sortByImportance() {
+  public List<ToDoItem> sortByImportance() {
     this.list.sort(new ImportanceComparator());
-    return (ToDoList) this.list;
+    return this.list;
   }
 
   @Override

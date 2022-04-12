@@ -2,8 +2,8 @@ public class Coordinate {
 
   /**
    * Constructor of Coordinate
-   * @param x
-   * @param y
+   * @param x coordinate of x-axis
+   * @param y coordinate of y-axis
    */
   public Coordinate(int x, int y) {
     this.x = x;

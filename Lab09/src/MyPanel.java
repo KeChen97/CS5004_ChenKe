@@ -170,6 +170,10 @@ public class MyPanel extends JPanel implements ActionListener, KeyListener {
     }
   }
 
+  /**
+   * This function released the keyboard
+   * @param e a KeyEvent object
+   */
   @Override
   public void keyReleased(KeyEvent e) {
     // do nothing

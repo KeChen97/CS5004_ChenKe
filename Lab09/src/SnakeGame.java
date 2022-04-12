@@ -16,3 +16,9 @@ public class SnakeGame {
     frame.setVisible(true);
   }
 }
+
+// Commentary for possible future improvements
+// 1. if we use Enum type to present the direction of up down left right, instead of int 1 2 3 4  can be more clear.
+// 2. we can add more features like : a. the game will over if the snake eats (touches) its body
+//                                    b. the game will over if the snake touches the edge of the panel
+//

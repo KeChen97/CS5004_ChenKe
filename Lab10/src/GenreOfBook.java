@@ -1,0 +1,3 @@
+public enum GenreOfBook {
+  ROMANCE, MURDER, HISTORY, TECHNICAL, ADVENTURE
+}

@@ -80,7 +80,7 @@ public class MyPanel extends JPanel implements ActionListener, KeyListener {
   }
 
   /**
-   * This function control the snake move
+   * This function control the operation of snake and apple
    * @param e an ActionEvent object, processing individual mouse movements and mouse clicks
    */
   @Override

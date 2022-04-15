@@ -60,7 +60,7 @@ public class MyPanel extends JPanel implements ActionListener, KeyListener {
   }
 
   /**
-   * Paint apple and snake in this function
+   * Paint apple and snake in this function based on their real-time locations
    * @param g a Graphics object
    */
   @Override
@@ -93,8 +93,13 @@ public class MyPanel extends JPanel implements ActionListener, KeyListener {
     // Trick: move the tail to become the new head,
     // and keep other nodes the same
     // 1. chop off the tail
-    Coordinate old_tail = snake_loc.remove(snake_loc.size()-1);
-    // TODO: what if size is 1
+    Coordinate old_tail;
+    if(snake_loc.size()==1) {
+      old_tail = snake_loc.get(0);
+    }
+    else {
+      old_tail = snake_loc.remove(snake_loc.size() - 1);
+    }
     // 2. get the loc of the old head
     int old_head_x = snake_loc.get(0).x;
     int old_head_y = snake_loc.get(0).y;
@@ -137,19 +142,26 @@ public class MyPanel extends JPanel implements ActionListener, KeyListener {
    */
   private void regenApple() {
     // Random location within the panel.
-    int new_x = rnd.nextInt(400);
-    int new_y = rnd.nextInt(400);
+    int new_x = rnd.nextInt(600);
+    int new_y = rnd.nextInt(600);
     // Round the location to dot_size.
     apple_loc = new Coordinate((new_x / dot_size) * dot_size, (new_y / dot_size) * dot_size);
   }
 
+  /**
+   * keyTyped is fired when a key is pressed that can be converted into a unicode character.
+   * The basic idea is that keyTyped is used to find characters that are typed.
+   * For this game, we don't need any keycode except up/down/left/right to control the snake, so that it will do nothing if receive keyTyped
+   * @param e  a KeyEvent object
+   */
   @Override
   public void keyTyped(KeyEvent e) {
     // do nothing
   }
 
   /**
-   * This function read the keyboard action
+   * This function read the keyboard action, it is used for obtain raw key presses.
+   * For this game, the direction will change based on when which key (up/down/left/right) is received from the keyboard,
    * @param e a KeyEvent object
    */
   @Override
@@ -172,6 +184,7 @@ public class MyPanel extends JPanel implements ActionListener, KeyListener {
 
   /**
    * This function released the keyboard
+   * For this game, do nothing if keyboard is released.
    * @param e a KeyEvent object
    */
   @Override

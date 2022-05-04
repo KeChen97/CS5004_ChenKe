@@ -2,11 +2,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 
 /**
@@ -41,16 +41,19 @@ public class SnakeGameTest {
   }
 
   @Test
-  public void directionTest(){
+  public void directionTest() throws AWTException {
+    controlWindow = new SnakeGameControllerWindow();
+    model = new SnakeGameModel(1, 1);
+    robot = new Robot();
+
     robot.keyPress(KeyEvent.VK_LEFT);
-    long start = System.nanoTime();
-    long end = start = TimeUnit.SECONDS.toNanos(1);
-//    try{Thread.sleep(600);} catch (InterruptedException e) {
-//      e.printStackTrace();
-//    }
-    while(System.nanoTime() < end){
+//    long start = System.nanoTime();
+//    long end = start = TimeUnit.SECONDS.toNanos(100);
+    try{Thread.sleep(600);} catch (InterruptedException e) {
+      e.printStackTrace();
     }
-    robot.keyPress(KeyEvent.VK_LEFT);
+//    while(System.nanoTime() < end){
+//    }
     assertEquals(Direction.LEFT,model.getDirection1());
   }
 

@@ -1,6 +1,3 @@
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 /**
  *  <Purpose of the file>
  * Author : KK 4/29/2022
@@ -14,20 +11,13 @@ import javax.swing.JPanel;
  *    One player's goal is eating more apples (head touches apple) and get more scores. Two players need to compete for the apple.
  * 3. Game will be over if the snake's head touches its body.
  * 4. The snake will lose the game if it hits another snake.
+ * 5. User can press SPACE to restart the game if game is over.
  *
  */
 public class SnakeGame {
-  public static JPanel panel;
-  public static JFrame frame;
-  public static JFrame optionFrame;
-  public static final int frameWidth = 700;  // width of the frame container
-  public static final int frameHeight = 800; // height of the frame container
-  public static final int panelWidth = 700;  // 600 + panelframe * 2
-  public static final int panelHeight = 700; // 600 + panelframe * 2
-  public static final int panelFrame = 50; // the dark pink frame of the panel view
 
   public static void main(String[] args) {
-    optionFrame = new SnakeGameControllerWindow();
+    SnakeGameControllerWindow.optionFrame = new SnakeGameControllerWindow();
   }
 }
 

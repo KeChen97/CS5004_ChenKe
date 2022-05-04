@@ -203,28 +203,28 @@ public class SnakeGameModel extends JPanel implements ActionListener, KeyListene
     if (direction == Direction.UP) {
       // up, if the snake touch the boundary, it will appear on the other side
       new_head_y -= dot_size;
-      if (new_head_y < title.getHeight(null) + SnakeGame.panelFrame) {
+      if (new_head_y < title.getHeight(null) + SnakeGameControllerWindow.panelFrame) {
         new_head_y =
-            title.getHeight(null) + SnakeGame.panelHeight - SnakeGame.panelFrame - dot_size;
+            title.getHeight(null) + SnakeGameControllerWindow.panelHeight - SnakeGameControllerWindow.panelFrame - dot_size;
       }
     } else if (direction == Direction.DOWN) {
       // down, if the snake touch the boundary, it will appear on the other side
       new_head_y += dot_size;
       if (new_head_y
-          > title.getHeight(null) + SnakeGame.panelHeight - SnakeGame.panelFrame - dot_size) {
-        new_head_y = title.getHeight(null) + SnakeGame.panelFrame;
+          > title.getHeight(null) + SnakeGameControllerWindow.panelHeight - SnakeGameControllerWindow.panelFrame - dot_size) {
+        new_head_y = title.getHeight(null) + SnakeGameControllerWindow.panelFrame;
       }
     } else if (direction == Direction.LEFT) {
       // left, if the snake touch the boundary, it will appear on the other side
       new_head_x -= dot_size;
-      if (new_head_x < SnakeGame.panelFrame) {
-        new_head_x = SnakeGame.panelWidth - SnakeGame.panelFrame - dot_size;
+      if (new_head_x < SnakeGameControllerWindow.panelFrame) {
+        new_head_x = SnakeGameControllerWindow.panelWidth - SnakeGameControllerWindow.panelFrame - dot_size;
       }
     } else if (direction == Direction.RIGHT) {
       // right, if the snake touch the boundary, it will appear on the other side
       new_head_x += dot_size;
-      if (new_head_x >= SnakeGame.panelWidth - SnakeGame.panelFrame) {
-        new_head_x = SnakeGame.panelFrame;
+      if (new_head_x >= SnakeGameControllerWindow.panelWidth - SnakeGameControllerWindow.panelFrame) {
+        new_head_x = SnakeGameControllerWindow.panelFrame;
       }
     }
 
@@ -326,9 +326,9 @@ public class SnakeGameModel extends JPanel implements ActionListener, KeyListene
    */
   private void regenApple() {
     // Random location within the panel.
-    int new_x = rnd.nextInt(SnakeGame.panelFrame, SnakeGame.panelWidth - SnakeGame.panelFrame);
-    int new_y = rnd.nextInt(SnakeGame.panelFrame + title.getHeight(null),
-        title.getHeight(null) + SnakeGame.panelHeight - SnakeGame.panelFrame);
+    int new_x = rnd.nextInt(SnakeGameControllerWindow.panelFrame, SnakeGameControllerWindow.panelWidth - SnakeGameControllerWindow.panelFrame);
+    int new_y = rnd.nextInt(SnakeGameControllerWindow.panelFrame + title.getHeight(null),
+        title.getHeight(null) + SnakeGameControllerWindow.panelHeight - SnakeGameControllerWindow.panelFrame);
     // Round the location to dot_size.
     apple_loc = new Coordinate((new_x / dot_size) * dot_size, (new_y / dot_size) * dot_size);
     System.out.println(

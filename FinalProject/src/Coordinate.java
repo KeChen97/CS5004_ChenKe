@@ -24,7 +24,6 @@ public class Coordinate {
       Coordinate other = (Coordinate) obj;
       return other.x == this.x && other.y == this.y;
     }
-
     return false;
   }
 }

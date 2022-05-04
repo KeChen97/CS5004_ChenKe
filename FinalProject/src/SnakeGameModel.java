@@ -425,7 +425,6 @@ public class SnakeGameModel extends JPanel implements ActionListener, KeyListene
     // do nothing
   }
 
-
   /**
    * @return A coordinate which is the apple's location for now
    */

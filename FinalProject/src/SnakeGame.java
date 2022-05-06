@@ -15,9 +15,10 @@
  *
  */
 public class SnakeGame {
+  static GameController game;
 
   public static void main(String[] args) {
-    SnakeGameControllerWindow.optionFrame = new SnakeGameControllerWindow();
+    game = new GameController();
   }
 }
 

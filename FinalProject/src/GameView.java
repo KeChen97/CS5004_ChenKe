@@ -3,7 +3,7 @@ import javax.swing.JFrame;
 
 /**
  *  <Purpose of the file>
- * It is the game window as View of Snake Game
+ * It is the game window as View of Snake Game.
  */
 public class GameView extends JFrame {
 
